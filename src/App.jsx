@@ -13,6 +13,7 @@ import { SearchProvider } from "./context/SearchContext";
 
 
 function App() {
+  const basename = import.meta.env.MODE === "production" ? "/Fake-Shop" : "/"
   const produits = useContext(ProduitContext)
   const router = createBrowserRouter([
     {
@@ -40,7 +41,7 @@ function App() {
       <SearchProvider>
         <ProduitProvider>
           <PanierProvider>
-            <RouterProvider className='router' router={router} />
+            <RouterProvider basename={basename} className='router' router={router} />
           </PanierProvider>
         </ProduitProvider>
       </SearchProvider>

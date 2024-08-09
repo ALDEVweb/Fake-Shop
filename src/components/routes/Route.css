@@ -1,0 +1,242 @@
+/* home */
+.home{
+    position: relative;
+    padding-top: 34px;
+}
+.containerCatBar{
+    width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
+    padding: 10px;
+    background-color: #F9F1E8;
+    position: sticky;
+    top: 34px;
+    z-index: 1;
+}
+
+.categorieBar{ 
+    display: flex;
+    width: fit-content;
+    gap: 10px;
+}
+
+.buttonCatCheck{
+    background-color: #FCA436;
+}
+.buttonCatUncheck{
+    background-color: black;
+}
+.recherche{
+    width: 90%;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 16px;
+    padding: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    /* de base, la barre recherche est caché et ne prend pas de place dans le flux */
+    height: 0;
+    overflow: hidden;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 1s ease, height 1s ease;
+}
+.rechercheVisible{
+    /* la barre de recherche reprend doucement sa place dans le flux  */
+    height: 32px;
+    transform: scaleY(1);
+}
+.recherche input{
+    width: 70%;
+    height: 32px;
+    border: none;
+}
+
+.search{background-image: url('../../../public/images/Search.png'); border-radius: 16px;}
+.close{
+    background-image: url('../../../public/images/Close.png');
+    background-color: white;
+    border: none;
+    border-radius: 16px;
+}
+
+/* Produit */
+.produit{
+    margin-top: 34px;
+    width: 100%;
+    background-color: white;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+.cart{background-image: url('../../../public/images/Shopping-Cart-White.png');}
+.trash{background-image: url('../../../public/images/Empty-Trash.png');}
+.imageDetailProduit{
+    background-color: white;
+    width: 90%;
+    margin: 0 auto;
+    height: calc(42vh - 34px);
+    padding: 5% 0;
+}
+.imageDetailProduit img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.detailproduit{
+    background-color: black;
+    width: 100%;
+    height: 58vh;
+    border-radius: 32px 32px 0 0;
+    padding: 32px 5%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: center;
+}
+.prixproduit{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+}
+.prixproduit h3{
+    font-size: 18px;
+    font-weight: 700;
+
+}
+.noteproduit{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.noteproduit p, .description{
+    font-size: 12px;
+    font-weight: 400;
+}
+.quantite{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rating{
+    width: 120px;
+    height: 24px;
+    position: relative;
+    margin-right: 10px;
+}
+.coloration{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #FCA436;
+    z-index: 1;
+}
+.etoile{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+.etoile img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* panier */
+.panier{
+    width: 100%;
+    height: calc(100vh - 34px);
+    position: relative;
+    margin-top: 34px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    padding-bottom: 35vh;
+}
+.finalisation{
+    width: 100%;
+    height: 35vh;
+    position: fixed;
+    bottom: 0;
+    background-color: black;
+    color: white;
+    border-radius: 32px 32px 0 0;
+    padding: 16px 5% 80px 5%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+.prixpanier{
+    width: 100%;
+    padding: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.texteTotal{
+    font-size: 16px;
+    font-weight: 700;
+}
+.nbrearticle, .infoTrsprt{
+    font-size: 12px;
+    font-weight: 400;
+}
+.infoTrsprt{
+    width: 80%;
+    font-style: italic;
+}
+.paiement{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.typePaiement{
+    display: flex;
+    gap: 5px;
+    width: fit-content;
+}
+.pict30{
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.visa{background-image: url('../../../public/images/Visa.png');}
+.mc{background-image: url('../../../public/images/MasterCard.png');}
+.pp{background-image: url('../../../public/images/PayPal.png');}
+.pict22{
+    width: 22px;
+    height: 22px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.coins{background-image: url('../../../public/images/Coins.png');}
+
+@media screen and (min-width: 450px){
+    .containerCatBar{
+        scrollbar-width: thin;
+        scrollbar-color: black white;
+    }
+    .imageDetailProduit{
+        height: 196px;
+    }
+    .detailproduit{
+        height: 317px;
+    }
+    .panier{
+        height: 511px;
+    }
+    .finalisation{
+        position: absolute;
+    }
+}

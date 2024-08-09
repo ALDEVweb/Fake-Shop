@@ -1,0 +1,33 @@
+.button{
+    height: 35px;
+    border-radius: 19px;
+    border: none;
+    color: white;
+    background-color: #FCA436;
+}
+.smallBut{
+    width: 200px;
+}
+.largeBut{
+    width: 245px;
+}
+.buttonCat{
+    width: 100px;
+    height: 44px;
+    border-radius: 16px;
+    border: none;
+    color: white;
+}
+.ajoutButton, .paiementBut{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.supprimButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #A7A7A7;
+}

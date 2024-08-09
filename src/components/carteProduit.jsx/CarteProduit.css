@@ -1,0 +1,24 @@
+.carteProduit{
+    width: 150px;
+    height: 320px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: center;
+    background-color: white;
+    border-radius: 8px;
+    padding: 8px;
+}
+.carteProduit h3{
+    font-size: 12px;
+    font-weight: 700;
+}
+.imageCarteProduit{
+    width: 150px;
+    height: 190px;
+}
+.imageCarteProduit img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}

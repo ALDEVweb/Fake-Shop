@@ -1,0 +1,68 @@
+.containCartPanier{
+    width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+.cartepanier{
+    width: 117%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    margin-bottom: 8px;
+}
+.imagepanier{
+    width: 15%;
+    height: 89%;
+}
+.imagepanier img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.detailpanier{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    gap: 10px;
+    padding: 0 2%;
+}
+.detailpanier h3{
+    width: 100%;
+    font-size: 12px;
+    font-weight: 700;
+}
+.ajustPanier{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.supProduit{
+    width: 15%;
+    height: 100%;
+    background-color: #AC0909;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.supProduitTrash{
+    width: 32px;
+    height: 32px;
+    background-image: url('../../../public/images/Empty-Trash.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+
+@media screen and (min-width: 450px){
+    .containCartPanier{
+        scrollbar-width: thin;
+        scrollbar-color: black white;
+    }
+}

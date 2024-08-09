@@ -1,0 +1,14 @@
+
+.ajusteQte{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+}
+.buttonajuste{
+    width: 26px;
+    height: 26px;
+    background-color: #A7A7A7;
+    border-radius: 4px;
+}

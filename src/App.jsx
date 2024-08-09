@@ -12,7 +12,9 @@ import PanierProvider from "./context/PanierContext";
 import { SearchProvider } from "./context/SearchContext";
 
 
+
 function App() {
+  const basename = import.meta.env.MODE === "production" ? "/Fake-Shop" : "/"
   const produits = useContext(ProduitContext)
   const router = createBrowserRouter([
     {
@@ -33,7 +35,9 @@ function App() {
         }
       ]
     },
-  ]);
+  ],{
+    basename: basename
+  });
   
   return (
     <div className="body">
